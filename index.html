@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <title>Andela bookmark app</title>
+</head>
+<body>
+<main id="main_div">
+    <h1>Andela bookmarks</h1>
+
+    <div id="operation_div">
+        <h2>operations</h2>
+        <button id="create_a_bookmark">New bookmark</button>
+        <button id="view_bookmarks">View bookmarks</button>
+    </div>
+    <form id="create_bookmark_form" class="">
+        <label for="title_input">title</label>
+        <input id="title_input" name="title" type="text" required />
+
+        <label for="link_input">link</label>
+        <input id="link_input" name="link" type="url" required />
+
+        <label for="description_input">Description</label>
+        <textarea id="description_input" name="description" rows="20" cols="12" required></textarea>
+
+        <label for="category_select">Category</label>
+        <select id="category_select" name="category" required>
+            <option value="movie">Movie</option>
+            <option value="music">Music</option>
+            <option value="learn">Learning</option>
+            <option value="life">Life</option>
+        </select>
+
+        <button id="form_submit">Save bookmark</button>
+    </form>
+    <div id="bookmarks_view">
+        <div id="allBookmarks">
+            <div id="bookmarks_group_view">
+                <button class="category_view">movie</button>
+                <button class="category_view">music</button>
+                <button class="category_view">learn</button>
+                <button class="category_view">life</button>
+
+            </div>
+            <div id="bookmarks_list">
+                <div id="bookmark_simple_view" class="bookmark_simple_view">
+                    <dl class="bookmark_component_view">
+                        <dt class="title">title</dt>
+                        <dd id="title_value" class="bookmark_content">bookmark title</dd>
+                    </dl>
+                    <dl class="bookmark_component_view">
+                        <dt class="title">category</dt>
+                        <dd id="category_name_value" class="bookmark_content">category name</dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+        <div id="single_bookmark_view" class="single_bookmark_view">
+            <div class="single_bookmark_head">
+                <h5 id="single_title">title</h5>
+                <p id="single_category">Category</p>
+            </div>
+            <p id="single_description">
+                here the paragraph content will be aligned here
+            </p>
+            <p id="single_link">https://www.link_example.com</p>
+
+        </div>
+    </div>
+</main>
+
+<script src="index.js" type="text/javascript" ></script>
+</body>
+</html>
